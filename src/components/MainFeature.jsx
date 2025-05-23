@@ -238,7 +238,7 @@ const MainFeature = ({ categoryId }) => {
   return (
     <div className="space-y-6">
       {/* Search and filter bar */}
-      <div className="flex flex-col md:flex-row md:items-center gap-3 mb-4">
+      <div className="flex flex-col md:flex-row md:items-center gap-3 mb-4 min-w-0">
         <div className="relative flex-grow">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <SearchIcon className="h-5 w-5 text-surface-400" />
@@ -260,7 +260,7 @@ const MainFeature = ({ categoryId }) => {
           )}
         </div>
         
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-shrink-0">
           <label className="flex items-center space-x-2 text-sm cursor-pointer">
             <input
               type="checkbox"
@@ -272,7 +272,7 @@ const MainFeature = ({ categoryId }) => {
           </label>
           
           <button 
-            className="btn-primary ml-auto"
+            className="btn-primary ml-auto whitespace-nowrap"
             onClick={() => {
               setIsAdding(true);
               setEditingTaskId(null);
@@ -327,7 +327,7 @@ const MainFeature = ({ categoryId }) => {
                   />
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="priority" className="block text-sm font-medium mb-1">
                       Priority

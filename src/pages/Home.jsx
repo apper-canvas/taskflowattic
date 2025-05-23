@@ -163,7 +163,7 @@ const Home = () => {
                 <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">Coming Soon</span>
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
                 {[
                   { icon: 'calendar-clock', title: 'Time Tracking', description: 'Track time spent on each task' },
                   { icon: 'repeat', title: 'Recurring Tasks', description: 'Set up tasks that repeat on schedule' },
@@ -177,7 +177,7 @@ const Home = () => {
                   return (
                     <motion.div 
                       key={index}
-                      className="card hover:shadow-soft cursor-pointer group"
+                      className="card hover:shadow-soft cursor-pointer group h-full flex flex-col"
                       whileHover={{ y: -5 }}
                       transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     >
@@ -186,9 +186,9 @@ const Home = () => {
                           <FeatureIcon className="h-6 w-6 text-primary" />
                         </div>
                         
-                        <div className="flex-1">
-                          <h3 className="font-semibold mb-1">{feature.title}</h3>
-                          <p className="text-sm text-surface-600 dark:text-surface-400">
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-semibold mb-1 break-words">{feature.title}</h3>
+                          <p className="text-sm text-surface-600 dark:text-surface-400 break-words">
                             {feature.description}
                           </p>
                           
